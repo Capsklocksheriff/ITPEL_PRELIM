@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http="X-UA-Compatible" content="ie-edge">
+    <title>Budget Planner </title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+
+    </head>
+
+    <body>
+      <ion-row>
+        <ion-header>
+          <ion-toolbar colors="primary">
+            <ion-title>Budget Planner</ion-title>
+            </ion-toolbar>
+          </ion-header>
+          <ion-col>
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>Created Expenses</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+
+                  <ion-item>
+                    <ion-label position="floating">Expenses Reason</ion-label>
+                    <ion-input type="text" id="input-reason" placeholder="Please enter your Reason"></ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label position="floating">Amount of Expense</ion-label>
+                    <ion-input type="number" id="input-amount" placeholder="Please enter the Amount of Expenses" ></ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label position="floating">Expense Category</ion-label>
+                    <ion-input type="text" id="input-category" placeholder="Emergency funds, rent, gas, etc..."></ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label position="floating">Date of Expensed</ion-label>
+                    <ion-input type="date" id="input-date" placeholder="Please input the date"></ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label position="floating">Contact Name </ion-label>
+                    <ion-input type="text" id="input-name" placeholder="Please input the contact name"></ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label position="floating">Contact Number </ion-label>
+                    <ion-input type="number" id="input-number" placeholder="Please input the contact number"></ion-input>
+                  </ion-item>
+
+                  <div margin-vertical text-align="right">
+                    <ion-button id="btn-clear" fill="outline" color="danger">Clear
+                      <ion-icon slot="start" name="warning-outline"></ion-icon>
+                    </ion-button>
+                    <ion-button id="btn-add">Add some Expense
+                      <ion-icon slot="start" name="add-circle-outline"></ion-icon>
+                    </ion-button>
+                    </div>
+                    </ion-card-content>
+                </ion-card>
+              </ion-col>
+            </ion-row>
+  
+  
+  
+              <ion-row>
+              <ion-row size-md="6" offset-md="3">
+                <ion-list id="expenses-list">
+                </ion-list>
+              </ion-row>
+          </ion-col>
+  
+          <ion-row>
+            <vr>
+            <ion-col size-md="6" offset-md="3">
+              <p margin>Total of the Expenses: ₱ 
+                <span id="total-expenses"></span> </p>
+              </vr>
+            </ion-col>
+          </ion-row> 
+  
+            <ion-aler></ion-aler>
+          </ion-content>
+          <script src="app.js"></script>
+        </ion-app>
+      </body>
+   </html>
